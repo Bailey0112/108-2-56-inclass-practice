@@ -80,4 +80,77 @@ stringInteger <- c(1,2,-11)
 class(stringInteger) # 無法進行數值運算
 stringInteger+2
 ```
+```{r}
+studentId <- c(410773002, 410773015)
+studentId = as.character(studentId)
+```
+
+```{r}
+class(studentId)
+```
+```{r}
+library(lubridate)
+```
+
+台北 2020-03-18 13:52:40
+```{r}
+tpeDateTime <-ymd_hms("2020-03-18 13:52:40", tz="Asia/Taipei")
+```
+葡萄牙 Mar.18, 2020, 05:52:40
+```{r}
+pgDateTime <-
+mdy_hms("Mar.18, 2020, 05:52:40", tz="Europe/Lisbon")
+```
+##還不能執行97 101 因為還沒有設定時區
+```{r}
+with_tz(tpeDateTime,tzone = "UTC")
+with_tz(pgDateTime,tzone = "UTC")
+```
+```{r}
+with_tz(
+  ymd_hms("2020-03-04T06:24:15Z"),
+  tzone = "Asia/Taipei")
+```
+```{r}
+browseURL("https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645")
+```
+
+```{r}
+created_at <-
+  with_tz(
+    ymd_hms("2020-03-04T06:43:27Z")
+    ,tzone="Asia/Taipei")
+  
+firstcommit <- ymd_hms("2020-03-11 14:09:47", tz="Asia/Taipei")
+
+lastcommit <- ymd_hms("2020-03-11 14:16:58", tz="Asia/Taipei")
+
+```
+
+```{r}
+studentTime <-
+  c(with_tz(
+    ymd_hms("2020-03-04T06:43:27Z")
+    ,tzone="Asia/Taipei")
+    
+    ,ymd_hms("2020-03-11 14:09:47", tz="Asia/Taipei")
+    
+    ,ymd_hms("2020-03-11 14:16:58", tz="Asia/Taipei")
+    )
+```
+
+```{r}
+parisTime <-
+with_tz( studentTime,tzone = "Europe/Paris")
+```
+
+```{r}
+StudentTime <- c(
+  ymd_hms("2020-03-04T06:43:27Z"),
+  ymd_hms(
+    c("2020-03-11 14:09:47","2020-03-11 14:16:58"))
+  ,tz="Asia/Taipei"
+    )
+  
+```
 
