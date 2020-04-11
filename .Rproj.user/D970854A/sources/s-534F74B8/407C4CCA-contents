@@ -48,19 +48,17 @@ install.packages("lubridate")
 執行以下程式可以分別得到兩個時間：
 ```{r data22}
 taiwan_time <- "西元2019年4月12日 12點55分30秒"
-oslo_time <- "C"
+oslo_time <- "18.11.2018 15:33:02"
 ```
 
 其中taiwan_time為台灣時間，oslo_time為挪威Oslo時間。請將兩個時間存在一個atomic vector叫two_times的物件裡，且為Date/Time class（即POSIXct POSIXt class）。
 
 ```{r ans22}
 # two_times
-two_times<- c(taiwan_time=ymd_hms("西元2019年4月12日 12點55分30秒"),
-              oslo_time=ymd_hms("")
-  
-  
-  
-)
+two_times<-c(taiwan_time=ymd_hms("2019.4.12 12:55:30"),
+             oslo_time=dmy_hms("18.11.2018 15:33:02")
+  )
+two_times
 ```
 
 ### 2.3
@@ -68,6 +66,10 @@ two_times<- c(taiwan_time=ymd_hms("西元2019年4月12日 12點55分30秒"),
 
 ```{r ans23}
 # two_times_chicago
+two_times_chicago=
+                  with_tz(two_times,tzone = "America/Chicago"
+  )
+two_times_chicago
 ```
 
 ## 3 List

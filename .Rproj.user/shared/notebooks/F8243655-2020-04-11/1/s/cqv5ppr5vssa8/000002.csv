@@ -1,0 +1,8 @@
+"0","econOnly<-c(T,T,F,F,T)"
+"0","econFemaleOnly<-c(T,T,F)"
+"0","econFemaleNames<-names[econOnly][econFemaleOnly];econFemaleNames"
+"1","[1]"
+"1"," ""小英"""
+"1"," ""小美"""
+"1","
+"
