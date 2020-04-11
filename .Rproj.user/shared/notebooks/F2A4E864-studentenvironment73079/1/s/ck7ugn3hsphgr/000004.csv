@@ -1,0 +1,19 @@
+"0","if(!require(""readr"")){"
+"0","  install.packages(""readr"")"
+"0","}"
+"0","sink(""report.txt"")"
+"0","Sys.getenv()"
+"0","Sys.getlocale()"
+"0","readr::locale()"
+"0","sessionInfo()"
+"0","sink()"
+"0","warning("
+"0","  'Please upload the following file: \n',"
+"0","  file.path(getwd(),""report.txt""),"
+"0","  '\nto the following website:\n',"
+"0","  'https://forms.gle/vPoQ1MC4cNEJuNqM8'"
+"0",")"
+"2","Please upload the following file: 
+C:/Users/we072/OneDrive/¤å¥ó/GitHub/108-2-56-inclass-practice/report.txt
+to the following website:
+https://forms.gle/vPoQ1MC4cNEJuNqM8"
