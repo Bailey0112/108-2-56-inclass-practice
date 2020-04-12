@@ -1,7 +1,6 @@
 "0","# two_times_chicago"
 "0","two_times_chicago="
-"0","                  with_tz(two_times,tzone = ""America/Chicago"""
-"0","  )"
+"0","                  with_tz(two_times,tzone = ""America/Chicago"")"
 "0","two_times_chicago"
 "1","              taiwan_time "
 "1","                oslo_time "
