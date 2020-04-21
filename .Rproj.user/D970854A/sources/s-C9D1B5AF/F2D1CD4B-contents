@@ -122,7 +122,9 @@ List of 9
 ```
 ```{r ans31}
 # Pikachu
-pikachu<-Gamemaster[[1]][[27]]
+names(Gamemaster)
+
+pikachu<- Gamemaster$pokemon[[27]]
 str(pikachu)
 pikachu
 ```
@@ -134,9 +136,12 @@ pikachu
 記得class怎麼改嗎?vector內容請按照「atk、def、hp」這樣的順序喔。
 ```{r ans32}
 # Pikachu_stats
-c(pikachu[[4]][c(1,2,3)])->baseStats
+as.numeric(c(pikachu$baseStats$atk,pikachu$baseStats$def,pikachu$baseStats$hp))->pikachu_stats
+pikachu_stats
+```
+```{r}
+baseStats<- pikachu$baseStats
 as.numeric(baseStats)->pikachu_stats
-
 pikachu_stats
 ```
 
@@ -146,10 +151,10 @@ pikachu_stats
 
 ```{r ans33}
 # Jigglypuff
-Gamemaster[[1]][[46]]->Jigglypuff
-Jigglypuff$speciesName<-"Jigglypuff"
+Gamemaster$pokemon[[46]]$speciesName<-"Jigglypuff"
+Jigglypuff<- Gamemaster$pokemon[[46]]
+str(Jigglypuff)
 
-Jigglypuff
 ```
 
 ### 3.4 魔王題——考驗自己有沒有成為程式設計大師/洛托姆的時候到了
@@ -169,15 +174,14 @@ Jigglypuff
 注意Mimikyu的各種資料格式都應該要跟Pikachu、Jigglypuff他們一樣喔。
 ```{r ans34}
 # Gamemaster
-Gamemaster[[1]][[778]]<-list(dex=778,speciesName="Mimikyu",speciesId="mimikyu",
-                             baseStats=list(pikachu[[4]]),
-                             types=c("ghost","fairy"),fastMoves=c(Jigglypuff[[6]]),
-                             chargedMoves=c(Jigglypuff[[7]]),
-                             legacyMoves=c(Jigglypuff[[8]]),
-                             defaultIVs=list(Jigglypuff[[9]])
-  )
-Gamemaster
-```
+Mimikyu<-Jigglypuff
+Mimikyu$dex<-as.integer(778)
+Mimikyu$speciesName<-"Mimikyu"
+Mimikyu$speciesId<-"mimikyu"
+Mimikyu$baseStats<-pikachu$baseStats
+Mimikyu$types<-c("ghost","fairy")
 
+Gamemaster$pokemon[[731]]<-Mimikyu
+```
 
 # 恭喜你寫完了!最後記得回去檢查注意事項有沒有都做到，避免被白扣分喔~
