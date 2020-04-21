@@ -1,0 +1,13 @@
+"0","# 啟動一個乾淨空的R環境"
+"0","source(""https://www.dropbox.com/s/xtge2ghfb7dhple/108-2-hw1-4.R?dl=1"") "
+"0","# 除了Global environment會清空，之前引入的套件也會被移除"
+"0","library(lubridate)"
+"2","
+Attaching package: ��lubridate��
+
+"
+"2","The following object is masked from ��package:base��:
+
+    date
+
+"
