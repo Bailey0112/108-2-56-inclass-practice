@@ -58,7 +58,6 @@ table_countsByArticle
 ```{r ans13}
 # mostViolatedArticle
 max_number<- max(table_countsByArticle)
-max_number
 max_lawname<-table_countsByArticle>=max_number
 table_countsByArticle[max_lawname]->mostViolatedArticle
 names(mostViolatedArticle)
@@ -72,7 +71,7 @@ mostViolatedArticle
 # mostViolatedArticle_content
 table_content<-table(badEmployers$lawContent)
 max_content<-max(table_content)
-max_content
+
 max_contentname<-table_content>=max_content
 mostViolatedArticle_content<-table_content[max_contentname]
 mostViolatedArticle_content
@@ -82,8 +81,10 @@ mostViolatedArticle_content
 找出處份日期最常出現的月份並存在popularSentenceMonth（class character, length=1）：
 ```{r ans15}
 # popularSentenceMonth
-table_dt<-table(badEmployers$dt)
-table_dt
+str(badEmployers$dt)
+library(lubridate)
+date_time<-badEmployers$dt
+ymd(date_time,tz="UtC")
 
 ```
 
@@ -110,9 +111,11 @@ source("https://www.dropbox.com/s/5oy56om4q0857tt/student10.R?dl=1",encoding = "
 factor是從1開始的整數，沒有0喔。
 ```{r ans21}
 # chinese
+as.factor(table$`國文`)->chinese
 table$`國文`<-ordered(table$`國文`)
-class(table$`國文`)
-chinese<-table$`國文`
+table$`級分`+1->table$`級分`
+chinese
+
 ```
 
 ### 2.2 str_detect()
@@ -138,9 +141,15 @@ logical儲存的本質是甚麼?
 ```{r ans23}
 # ntpu_econtpu_eco
 students10$`國文`[namelist]>=12 -> rank_1
-ntpu_namelist[rank_1]->passone
-passone
 
+ntpu_namelist[rank_1]->passone
+
+students10$`英文`[namelist][rank_1]->rank1_eng
+students10$`數學`[namelist][rank_1]->rank1_math
+rank1_eng+rank1_math>=26->rank_2
+
+passone[rank_2]->ntpu_econtpu_eco
+ntpu_econtpu_eco
 ```
 
 ### 2.4 %in%
@@ -152,4 +161,11 @@ passone
 請將榜單文字儲存到名為congrats的答案物件(class為chr)。
 ```{r ans24}
 # congrats
+pick_fromstudents10<-students10$`姓名` %in% ntpu_econtpu_eco
+e<-"恭喜"
+paste0(e,ntpu_econtpu_eco)->f
+g<-"同學錄取國立臺北大學經濟系"
+paste0(f,g)-> congrats
+congrats
+
 ```
