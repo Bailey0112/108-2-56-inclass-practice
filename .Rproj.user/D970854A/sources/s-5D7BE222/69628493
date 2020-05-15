@@ -1,25 +1,25 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1587533110041.000,
+    "created" : 1589075875483.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "888AEEEE",
-    "lastKnownWriteTime" : 1587622435,
-    "last_content_update" : 1588836469109,
-    "path" : "C:/Users/we072/Downloads/exam1-410773079.Rmd",
+    "id" : "69628493",
+    "lastKnownWriteTime" : 1589467133,
+    "last_content_update" : 1589467133748,
+    "path" : "C:/Users/we072/OneDrive/桌面/School/大二下/R語言功課/homework4-410773079.Rmd",
     "project_path" : null,
     "properties" : {
-        "cursorPosition" : "123,0",
+        "cursorPosition" : "101,10",
         "last_setup_crc32" : "",
-        "scrollLine" : "0"
+        "scrollLine" : "60"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 1,
+    "relative_order" : 3,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"

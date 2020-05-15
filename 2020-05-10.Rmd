@@ -51,23 +51,16 @@ str_extract(addresses,myRegexSlotMachine)
 str_view_all(addresses,"[0-9]+") # 樓號也會選到
 ```
 ```{r}
-KC_date<-c("康熙23年5月6日")
+KC_date<-"康熙23年5月6日"
 
-regex_pattern1<-glue("(?<=`康熙`)[0-9]+(?=`年`)")
-library(stringr)
-year1 <- str_extract(KC_date,regex_pattern1
-                     )
-year1
-western_year<-as.integer(year1)+1662
-western_year
-str_replace(KC_date,regex_pattern,as.character(western_year))->KC_date_reformat
-print(KC_date_reformat)
+regex_pattern1<-"(?<=康熙)[0-9]+(?=年)"
+year1<- str_extract(KC_date,regex_pattern1)
+western_year1<-as.integer(year1)+1639
 
-lubridate::ymd(KC_date_reformat)
+str_replace(KC_date,regex_pattern1,as.character(western_year1))->new_date1
 
-print(KC_date_reformat)
+lubridate::ymd(new_date1)
 
-  
 ```
 ```{r}
 
@@ -81,5 +74,16 @@ print(twDate_reformat)
 
 
 lubridate::ymd(twDate_reformat)
+```
+```{r}
+oldDate <- "康熙23年5月6日"
+regex_pattern <- "(?<=康熙)[0-9]+(?=年)"
+year <- str_extract(oldDate, regex_pattern)
+western_year <- as.integer(year) + 1639
+newDate <- str_replace(oldDate, regex_pattern, as.character(western_year))
+lubridate::ymd(newDate)
+```
+```{r}
+paste0("段(兄|兄弟)"
 ```
 
