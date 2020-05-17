@@ -176,6 +176,9 @@ covid19$`年齡層`
 ```
 
 ```{r}
+str(studentHeights)
+```
+
 
 ```
 

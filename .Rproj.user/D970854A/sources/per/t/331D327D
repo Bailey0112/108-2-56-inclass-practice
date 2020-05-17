@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589528770630.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4117521690",
+    "id" : "331D327D",
+    "lastKnownWriteTime" : 1589704056,
+    "last_content_update" : 1589704056946,
+    "path" : "C:/Users/we072/OneDrive/桌面/School/大二下/R語言功課/homework5-410773079.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "chunk_output_type" : "console",
+        "cursorPosition" : "202,6",
+        "scrollLine" : "174"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

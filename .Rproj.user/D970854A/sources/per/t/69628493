@@ -5,21 +5,21 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "4177348224",
     "id" : "69628493",
-    "lastKnownWriteTime" : 1589467133,
-    "last_content_update" : 1589467133748,
+    "lastKnownWriteTime" : 1589704095,
+    "last_content_update" : 1589704095482,
     "path" : "C:/Users/we072/OneDrive/桌面/School/大二下/R語言功課/homework4-410773079.Rmd",
     "project_path" : null,
     "properties" : {
-        "cursorPosition" : "101,10",
-        "last_setup_crc32" : "",
-        "scrollLine" : "60"
+        "cursorPosition" : "117,0",
+        "last_setup_crc32" : "FCC24B35dec84f4d",
+        "scrollLine" : "109"
     },
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 3,
+    "relative_order" : 2,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_markdown"
