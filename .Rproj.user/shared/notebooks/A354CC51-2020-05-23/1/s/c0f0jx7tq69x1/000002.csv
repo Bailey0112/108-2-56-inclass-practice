@@ -1,0 +1,2 @@
+"0","map(dance[[8]]$showInfo,~.x$time)->show8time"
+"0","map(dance[[8]]$showInfo,~.x$location)->show8loca"
