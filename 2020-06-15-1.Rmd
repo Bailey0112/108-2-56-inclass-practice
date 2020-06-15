@@ -1,0 +1,94 @@
+---
+title: '2020-06-15'
+author: '"陳筱汶"'
+date: "2020/6/15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+jsonlite::fromJSON("https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=rdec-key-123-45678-011121314&format=JSON") ->
+  weather_next36hours
+```
+
+```{r}
+locationInput <- "新北市"
+dateInput <- lubridate::today()
+```
+
+```{r}
+weather_next36hours$cwbopendata$dataset$location==locationInput-> pick_location
+weather_next36hours$cwbopendata$dataset$location$weatherElement[pick_location][[1]]-> weatherAtLocation
+```
+
+```{r}
+weatherAtLocation$elementName=="MaxT"-> pick_MaxT
+weatherAtLocation$elementName=="MinT"-> pick_MinT
+```
+
+```{r}
+weatherAtLocation$time[pick_MaxT][[1]]$parameter$parameterName[[1]] -> maxT
+weatherAtLocation$time[pick_MinT][[1]]$parameter$parameterName[[1]] -> minT
+```
+
+```{r}
+glue::glue("{locationInput} {dateInput} 氣溫，最高{maxT}度，最低{minT}度。")
+```
+```{r}
+askSilly_weather<- function(
+  locationInput,dateInput)
+{ jsonlite::fromJSON("https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-C0032-001?Authorization=rdec-key-123-45678-011121314&format=JSON") ->
+  weather_next36hours
+  locationInput <- "新北市"
+dateInput <- lubridate::today()
+  weather_next36hours$cwbopendata$dataset$location==locationInput-> pick_location
+weather_next36hours$cwbopendata$dataset$location$weatherElement[pick_location][[1]]-> weatherAtLocation
+  weatherAtLocation$elementName=="MaxT"-> pick_MaxT
+weatherAtLocation$elementName=="MinT"-> pick_MinT
+  weatherAtLocation$time[pick_MaxT][[1]]$parameter$parameterName[[1]] -> maxT
+weatherAtLocation$time[pick_MinT][[1]]$parameter$parameterName[[1]] -> minT
+glue::glue("{locationInput} {dateInput} 氣溫，最高{maxT}度，最低{minT}度。")
+}
+```
+
+```{r}
+askSilly_weather("臺中市",today())
+askSilly_weather("花蓮縣",today())
+```
+```{r}
+library(lubridate)
+what_time_it_is<- function(p){
+  time_place<-with_tz(now(),tzone = p)
+  return(time_place)
+}
+```
+
+```{r}
+what_time_it_is("Europe/Paris")
+```
+```{r}
+
+```
+
