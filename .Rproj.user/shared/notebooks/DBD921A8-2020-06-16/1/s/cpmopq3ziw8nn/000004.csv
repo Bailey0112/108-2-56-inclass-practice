@@ -1,0 +1,9 @@
+"0","map(studentSequence,
+    ~compute_howEarly(
+      examSubmissionTime$section[[.x]],
+      examSubmissionTime$time[[.x]])
+    ) -> list_howEarly
+"
+"2","Error in map(studentSequence, ~compute_howEarly(examSubmissionTime$section[[.x]],  : 
+  沒有這個函數 ""map""
+"
