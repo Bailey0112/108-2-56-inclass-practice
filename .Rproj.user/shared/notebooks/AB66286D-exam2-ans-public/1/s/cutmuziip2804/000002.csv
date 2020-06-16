@@ -1,0 +1,8 @@
+"0","(courseStructure$學年 == ""103"" &"
+"0"," str_detect(courseStructure$應修系級, ""經濟系3"")"
+"0",") -> pick_courses"
+"0",""
+"0","courseStructure$科目名稱[pick_courses] %>%"
+"0","  unique() -> econ101junior"
+"0",""
+"0","# econ101junior"

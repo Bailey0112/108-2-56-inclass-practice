@@ -1,0 +1,8 @@
+"0","courseStructure$應修系級 %>%"
+"0","  str_extract_all("
+"0","    ""[^、]+系[司法學財經組]*[1-9]"""
+"0","  ) %>%"
+"0","  unlist() %>%"
+"0","  unique() -> majorGradeCombos"
+"0",""
+"0","# majorGradeCombos"

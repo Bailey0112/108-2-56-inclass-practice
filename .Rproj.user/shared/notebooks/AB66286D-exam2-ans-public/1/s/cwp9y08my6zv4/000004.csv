@@ -1,0 +1,3 @@
+"0","str_extract_all(courseStructure$`應修系級`,""[\u4E00-\u9FFF]+系[司法學財經組]*[0-9]"")->a"
+"0","unlist(a)->a"
+"0","unique(a)->majorgradecombos"

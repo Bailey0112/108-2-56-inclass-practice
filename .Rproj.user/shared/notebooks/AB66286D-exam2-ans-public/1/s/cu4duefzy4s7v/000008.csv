@@ -1,0 +1,7 @@
+"0","factor(unlist(list_doc))-> data228$`全宗名`
+"
+"2","Warning message:
+"
+"2","In grepl(""|||"", what, fixed = TRUE) :"
+"2"," 輸入的字串 1 不適用於此語言環境
+"
