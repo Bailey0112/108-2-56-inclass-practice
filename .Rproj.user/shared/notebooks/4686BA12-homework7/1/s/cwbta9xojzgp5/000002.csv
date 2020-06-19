@@ -1,0 +1,22 @@
+"0","# odd_or_even"
+"0","odd_or_even<- function(k){"
+"0","  as.integer(str_extract(k,""[0-9]+"") )-> k"
+"0","  if(as.logical(k %% 2)){1} else{2} -> `num_odd_or_even`"
+"0","  return(`num_odd_or_even`)"
+"0","}"
+"0","odd_or_even(Mask$`身分證字號`[[1]])"
+"1","[1]"
+"1"," 2"
+"1","
+"
+"0","odd_or_even"
+"1","function(k){
+"
+"1","  as.integer(str_extract(k,""[0-9]+"") )-> k
+"
+"1","  if(as.logical(k %% 2)){1} else{2} -> `num_odd_or_even`
+"
+"1","  return(`num_odd_or_even`)
+"
+"1","}
+"

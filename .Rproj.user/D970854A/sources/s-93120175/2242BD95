@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592556529384.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2242BD95",
+    "lastKnownWriteTime" : 1592556493,
+    "last_content_update" : 1592556529384,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "D98438B",
+        "caption" : "Mask",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Mask&cache_key=D98438B",
+        "displayedObservations" : 10,
+        "environment" : "",
+        "expression" : "Mask",
+        "object" : "Mask",
+        "preview" : 0,
+        "totalObservations" : 10,
+        "variables" : 1
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
