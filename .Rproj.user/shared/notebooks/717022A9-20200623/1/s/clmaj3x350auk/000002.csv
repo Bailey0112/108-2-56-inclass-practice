@@ -1,0 +1,4 @@
+"0","# 串接寫法(I): external dispatch"
+"0","sampleData[[1]] %>% {.[[1]]} "
+"2","Error in sampleData[[1]] %>% { : 沒有這個函數 ""%>%""
+"
