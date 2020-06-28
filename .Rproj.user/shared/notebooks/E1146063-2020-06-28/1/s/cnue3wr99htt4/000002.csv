@@ -1,0 +1,3 @@
+"0","map_pass_fail<- function(grade){"
+"0","  map_chr(grade,~{pass_or_fail(.)})"
+"0","}"
