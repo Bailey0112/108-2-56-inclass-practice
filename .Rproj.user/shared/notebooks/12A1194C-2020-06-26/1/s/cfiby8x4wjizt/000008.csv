@@ -1,0 +1,8 @@
+"0","grading= function(myAnswer,correctAnswer){
+  a=0
+  if(all(myAnswer==correctAnswer)&&class(myAnswer)==class(correctAnswer)){a=10}return(a)
+"
+"2","錯誤: unexpected symbol in:
+""  a=0
+  if(all(myAnswer==correctAnswer)&&class(myAnswer)==class(correctAnswer)){a=10}return""
+"

@@ -65,6 +65,10 @@ Mask$`身分證字號`[[1]] -> mask_1st
 as.integer(str_extract(mask_1st,"[0-9]+") )-> mask_1st
 if(as.logical(mask_1st %% 2)){1} else{2} -> `1st_odd_or_even`
 `1st_odd_or_even`
+
+Mask$身分證字號[[1]] %>%
+  str_sub(-1) %>%
+  as.integer() %% 2 -> `1st_odd_or_even`
 ```
 
 ### 2.2 身分證末碼判斷function
@@ -79,6 +83,20 @@ odd_or_even<- function(k){
 }
 odd_or_even(Mask$`身分證字號`[[1]])
 odd_or_even
+
+odds_or_even<- function(id){
+  id<-as.integer(str_sub(-1))%%2
+  return()
+}
+odds_or_even(Mask$`身分證字號`[[1]])
+
+
+odd_or_even <- function(id){
+  id[[1]] %>%
+    str_sub(-1) %>%
+    as.integer() %% 2 %>%
+    return()
+}
 ```
 
 ### 2.3 口罩實名制1.0—購買口罩日期

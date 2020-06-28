@@ -1,0 +1,10 @@
+"0","# `1st_odd_or_even`
+Mask$`身分證字號`[[1]]%>%
+  str_sub(-1) %>%
+  as.integer() %% 2 -> `1st_odd_or_even`
+"
+"2","Warning message:
+"
+"2","In grepl(""|||"", what, fixed = TRUE) :"
+"2"," 輸入的字串 1 不適用於此語言環境
+"

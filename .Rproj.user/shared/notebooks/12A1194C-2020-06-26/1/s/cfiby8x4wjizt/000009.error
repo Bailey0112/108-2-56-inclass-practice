@@ -1,0 +1,1 @@
+{"frames":[],"message":"錯誤: unexpected symbol in:\n\"  a=0\n  if(all(myAnswer==correctAnswer)&&class(myAnswer)==class(correctAnswer)){a=10}return\"\n"}
